@@ -1,0 +1,224 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dr. Kumar",
+      "email": "doctor@mediqueue.demo",
+      "phone": "+1 (555) 019-2831",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "DOCTOR",
+      "specialization": "Cardiologist & General Physician",
+      "avgConsultationTime": 7,
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Priya Sharma",
+      "email": "priya@mediqueue.demo",
+      "phone": "+1 (555) 019-4820",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "DOCTOR",
+      "specialization": "Pediatrician & Wellness",
+      "avgConsultationTime": 10,
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 3,
+      "name": "Demo Patient",
+      "email": "patient@mediqueue.demo",
+      "phone": "+1 (555) 234-5678",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 4,
+      "name": "Sarah Jenkins",
+      "email": "sarah@example.com",
+      "phone": "+1 (555) 987-6543",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 5,
+      "name": "Michael Chen",
+      "email": "michael@example.com",
+      "phone": "+1 (555) 876-5432",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 6,
+      "name": "Anita Patel",
+      "email": "anita@example.com",
+      "phone": "+1 (555) 765-4321",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 7,
+      "name": "Robert Taylor",
+      "email": "robert@example.com",
+      "phone": "+1 (555) 654-3210",
+      "passwordHash": "$2b$10$fFoB5ZHn1RdTrTWxbdU3peac8GdfCRSWaCo4rcnBSyoyS7qhrdxuK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 1786423137729,
+      "name": "Nethaji Nethaji",
+      "email": "nethuedits@gmail.com",
+      "phone": "+919363076229",
+      "passwordHash": "$2b$10$TsY0ce685Ltc1cKjKS.9vuly6o6wiL72cR4xpnPR5gNnYbBCbt2FK",
+      "role": "PATIENT",
+      "createdAt": "2026-08-11T04:38:57.729Z"
+    },
+    {
+      "id": 1786423440706,
+      "name": "Nethaji Nethaji",
+      "email": "nffnethaji1@gmail.com",
+      "phone": "+919363076229",
+      "passwordHash": "$2b$10$m36EoMlHJHBzhSDqRYAAjuaMMsY5AXfeizL7TvYIetxHLDnxKtxuC",
+      "role": "DOCTOR",
+      "createdAt": "2026-08-11T04:44:00.706Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 101,
+      "patientId": 4,
+      "patientName": "Sarah Jenkins",
+      "patientPhone": "+1 (555) 987-6543",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:00",
+      "tokenNumber": "A-23",
+      "status": "COMPLETED",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 102,
+      "patientId": 5,
+      "patientName": "Michael Chen",
+      "patientPhone": "+1 (555) 876-5432",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:15",
+      "tokenNumber": "A-24",
+      "status": "COMPLETED",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 103,
+      "patientId": 6,
+      "patientName": "Anita Patel",
+      "patientPhone": "+1 (555) 765-4321",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:30",
+      "tokenNumber": "A-25",
+      "status": "COMPLETED",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 104,
+      "patientId": 7,
+      "patientName": "Robert Taylor",
+      "patientPhone": "+1 (555) 654-3210",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:45",
+      "tokenNumber": "A-26",
+      "status": "COMPLETED",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 105,
+      "patientId": 3,
+      "patientName": "Demo Patient",
+      "patientPhone": "+1 (555) 234-5678",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "10:00",
+      "tokenNumber": "A-27",
+      "status": "COMPLETED",
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 1786423182803,
+      "patientId": 1786423137729,
+      "patientName": "Nethaji Nethaji",
+      "patientPhone": "+919363076229",
+      "doctorId": 2,
+      "doctorName": "Dr. Priya Sharma",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:00",
+      "tokenNumber": "A-01",
+      "status": "WAITING",
+      "createdAt": "2026-08-11T04:39:42.803Z"
+    },
+    {
+      "id": 1786423306097,
+      "patientId": 1786423137729,
+      "patientName": "Nethaji Nethaji",
+      "patientPhone": "+919363076229",
+      "doctorId": 1,
+      "doctorName": "Dr. Kumar",
+      "appointmentDate": "2026-08-11",
+      "appointmentTime": "09:00",
+      "tokenNumber": "A-06",
+      "status": "IN_PROGRESS",
+      "createdAt": "2026-08-11T04:41:46.097Z",
+      "prescriptionNotes": "jsfjgfh fghfh"
+    }
+  ],
+  "reminders": [
+    {
+      "id": 201,
+      "patientId": 3,
+      "medicineName": "Paracetamol 650mg",
+      "dosage": "1 tablet",
+      "reminderTime": "08:00",
+      "startDate": "2026-08-11",
+      "endDate": "2026-08-20",
+      "instructions": "Take after breakfast with water",
+      "active": true,
+      "takenToday": true,
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 202,
+      "patientId": 3,
+      "medicineName": "Amoxicillin 500mg",
+      "dosage": "1 capsule",
+      "reminderTime": "14:00",
+      "startDate": "2026-08-11",
+      "endDate": "2026-08-15",
+      "instructions": "Take after lunch with food",
+      "active": true,
+      "takenToday": false,
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    },
+    {
+      "id": 203,
+      "patientId": 3,
+      "medicineName": "Vitamin D3 1000IU",
+      "dosage": "1 softgel",
+      "reminderTime": "20:00",
+      "startDate": "2026-08-11",
+      "endDate": "2026-09-01",
+      "instructions": "Take after dinner",
+      "active": true,
+      "takenToday": false,
+      "createdAt": "2026-08-11T04:38:17.324Z"
+    }
+  ]
+}

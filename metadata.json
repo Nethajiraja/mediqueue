@@ -1,0 +1,6 @@
+{
+  "name": "MediQueue",
+  "description": "Smart Patient Queue & Medicine Reminder System for patients and doctors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
