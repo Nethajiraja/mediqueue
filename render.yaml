@@ -2,13 +2,28 @@ databases:
   - name: mediqueue-db
     databaseName: mediqueue
     user: mediqueue_user
-    plan: free                         # Free 90-day PostgreSQL on Render
+    plan: free
 
 services:
+  # Option 1: Express Full-Stack Monolith (Node + Vite React SPA + JSON DB) - Fastest to deploy
+  - type: web
+    name: mediqueue-express-monolith
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+
+  # Option 2: Spring Boot 3 Backend API (Java + PostgreSQL)
   - type: web
     name: mediqueue-backend
     runtime: docker
-    # Path to backend Dockerfile, relative to repo root
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
     plan: free
@@ -17,7 +32,6 @@ services:
     envVars:
       - key: JWT_SECRET
         generateValue: true
-      # Inject individual DB connection parts (jdbcConnectionString is not valid on Render)
       - fromDatabase:
           name: mediqueue-db
           property: host
