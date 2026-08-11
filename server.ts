@@ -306,6 +306,16 @@ async function startServer() {
   const app = express();
   app.use(express.json());
 
+  // Health check endpoint for containers, load balancers, and uptime monitors
+  app.get('/api/health', (req: Request, res: Response) => {
+    res.status(200).json({
+      status: 'UP',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      service: 'MediQueue API'
+    });
+  });
+
   // ==========================================
   // REST API ROUTES
   // ==========================================

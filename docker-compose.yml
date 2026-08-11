@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Database Service (PostgreSQL for Spring Boot / Production Database)
+  postgres:
+    image: postgres:16-alpine
+    container_name: mediqueue_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: mediqueue
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres_secure_password_2026}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mediqueue"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Full-Stack MediQueue Node/Express Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mediqueue_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=${JWT_SECRET:-mediqueue_jwt_secret_key_2026_super_secure_32bytes_min}
+    volumes:
+      - app_data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  app_data:
