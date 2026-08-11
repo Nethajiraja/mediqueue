@@ -17,11 +17,19 @@ services:
     envVars:
       - key: JWT_SECRET
         generateValue: true
-      # Render auto-injects JDBC_DATABASE_URL from the linked database
+      # Inject individual DB connection parts (jdbcConnectionString is not valid on Render)
       - fromDatabase:
           name: mediqueue-db
-          property: jdbcConnectionString
-        key: JDBC_DATABASE_URL
+          property: host
+        key: DB_HOST
+      - fromDatabase:
+          name: mediqueue-db
+          property: port
+        key: DB_PORT
+      - fromDatabase:
+          name: mediqueue-db
+          property: database
+        key: DB_NAME
       - fromDatabase:
           name: mediqueue-db
           property: user
